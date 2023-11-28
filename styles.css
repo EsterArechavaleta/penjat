@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #908add;
+  display: flex;
+  flex-direction: column;
+  color: #1d1b1b;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+.contenidor-seleccionar{
+  margin: 20px 0;
+}
+
+
+.contenidor{
+  margin-bottom: 30px;
+  perspective: 1000px;
+}
+
+.palabra{
+  width:500px;
+  height: 75px;
+  background-color: #fff;
+  padding: 15px;
+  color: #111;
+  
+}
+
+.letra{
+  background-color: #444451;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  padding: 20px;
+  color: #fff;
+ 
+}
+
+.letra.acertada{
+  background-color: rgb(62, 218, 14);
+}
+
+.letra.fallada{
+  background-color: #fa0909;
+}
+
+
+.letra:not(.fallada):hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.llegenda .letra:not(.fallada):hover{
+  cursor: default;
+  transform: scale(1);
+}
+
+
+.fila{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span{
+  color: #121313;
+}
+
+.countdown {
+    width: 152px;
+    height: 75px;
+    border: 1px solid #111;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    background: #222;
+    border-radius: 5px;
+    padding: 24px 0;
+    position: relative;
+}
+
+
+
+
+
+.countdown .tiles {
+    position: relative;
+    z-index: 1;
+}
+.countdown .tiles>span {
+    display: inline-block;
+    width: 15px;
+    height: 25px;
+    max-width: 15px;
+    font: bold 20px sans_serif, "Noto Sans";
+    text-align: center;
+    color: #111;
+    background-color: #ddd;
+    border-top: 1px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+    margin: 0 7px;
+    margin-bottom: 15px;
+    padding: 1px 0;
+    position: relative;
+}
+
