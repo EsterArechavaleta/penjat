@@ -7,61 +7,91 @@
     <title>Penjat</title>
 </head>
 <body>
-    <h1>El joc del Penjat</h1>
+    <h1>El juego del ahorcado</h1>
+    <div class="categoria">
+        <label for="categoria"> Elije una categoria: </label>
+        <select name="categoria" id="categoria">
+            <option value=" "></option>
+            <option value="animales" class="animales">Animales</option>
+            <option value="mtransporte" class="mtransporte">Medios de Transporte</option>
+            <option value="capitales" class="capitales">Capitales</option>
+            <option value="alimentos" class="alimentos">Alimentos</option>
+        </select>
+    </div>
     <div class="contenidor-seleccionar">
-        <label>Seleccioni una lletra, li queden <span class="contadorIntentos">0</span> intents.</label>
+        <label>Selecciona una letra, te quedan <span id="contadorIntentos">7</span> intentos.</label>
         
     </div>
-    <div class="palabra"></div>
-
-<div class="contenidor">
-    <div class="palabra"></div>
-    <div class="fila">
-        <div class="letra">A</div>
-        <div class="letra">B</div>
-        <div class="letra">C</div>
-        <div class="letra">D</div>
-        <div class="letra">E</div>
-        <div class="letra">F</div>
-        <div class="letra">G</div>
-        <div class="letra">H</div>
-    </div>
-    <div class="fila">
-        <div class="letra">I</div>
-        <div class="letra">J</div>
-        <div class="letra">K</div>
-        <div class="letra">L</div>
-        <div class="letra">M</div>
-        <div class="letra">N</div>
-        <div class="letra">Ñ</div>
-        <div class="letra">O</div>
-    </div>
-    <div class="fila">
-        <div class="letra">P</div>
-        <div class="letra">Q</div>
-        <div class="letra">R</div>
-        <div class="letra">S</div>
-        <div class="letra">T</div>
-        <div class="letra">U</div>
-        <div class="letra">V</div>
-        <div class="letra">W</div>
-    </div>
-    <div class="fila">
-        <div class="letra">X</div>
-        <div class="letra">Y</div>
-        <div class="letra">Z</div>
-    </div>
+    <div class="contenidor">
+        <div id="palabra"></div>
+        <div class="fila">
+            <div class="letra">A</div>
+            <div class="letra">B</div>
+            <div class="letra">C</div>
+            <div class="letra">D</div>
+            <div class="letra">E</div>
+            <div class="letra">F</div>
+            <div class="letra">G</div>
+            <div class="letra">H</div>
+        </div>
+        <div class="fila">
+            <div class="letra">I</div>
+            <div class="letra">J</div>
+            <div class="letra">K</div>
+            <div class="letra">L</div>
+            <div class="letra">M</div>
+            <div class="letra">N</div>
+            <div class="letra">Ñ</div>
+            <div class="letra">O</div>
+        </div>
+        <div class="fila">
+            <div class="letra">P</div>
+            <div class="letra">Q</div>
+            <div class="letra">R</div>
+            <div class="letra">S</div>
+            <div class="letra">T</div>
+            <div class="letra">U</div>
+            <div class="letra">V</div>
+            <div class="letra">W</div>
+        </div>
+        <div class="fila">
+            <div class="letra">X</div>
+            <div class="letra">Y</div>
+            <div class="letra">Z</div>
+        </div>
     
-</div>
-<p class="text">Has comés <span id="contador">0</span> errors.</p>
-<div class="countdown">
-    <div class="tiles">
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
     </div>
-</div>
-    <script src="cine.js"></script>
-</body>
+    <p class="text">Has comés <span id="contadorErrores">0</span> errors.</p>
+
+    <div class="countdown">
+        <div class="tiles">
+            <span id="horas">00</span>
+            <span id="minutos">00</span>
+            <span id="segundos">00</span>
+            
+        </div>
+    </div>
+    <button id="inicio">Iniciar</button>
+    <!-- pop_ups a mostrar -->
+    <div  id="envoltorio-victoria">
+        <div  class=" popup">
+            <div  id="cerrar-popup">x</div>
+            <div  id="contenido-victoria">
+                <h2>¡FELICIDADES!</h2>
+                <h4>Has acertado la palabra.</h4>
+            </div>
+        </div>
+      </div>
+        
+      <div  id="envoltorio-derrota">
+        <div  class=" popup">
+            <div  id="cerrar-popup">x</div>
+            <div  id="contenido-derrota">
+                <h2>¡Has perdido!</h2>
+                <h4>Intentalo de nuevo.</h4>
+            </div>
+        </div>
+      </div>
+        <script src="penjat.js" type="module"></script>
+    </body>
 </html>
